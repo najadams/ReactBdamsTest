@@ -1,12 +1,33 @@
 .shopTitle{
     margin: 50px;
-    font-size: 32px;
+    font-size: 74px;
+    font: bold;
 }
 .products{
     display: flex;
     flex-wrap: wrap;
 }
 img{
-    width: 60%;
+    width: 350px;
     height: 300px;
 }
+.description{
+    margin-bottom: 20px;
+}
+
+.addToCartBttn {
+    background-color: transparent;
+    border: 2px solid rgb(19, 19, 19);
+    min-width: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 15px;
+  }
+
+  .addToCartBttn:hover {
+    background-color: rgb(19, 19, 19);
+    color: white;
+    cursor: pointer;
+  }
