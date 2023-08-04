@@ -1,10 +1,11 @@
 .shopTitle{
     margin: 50px;
-    font-size: 74px;
-    font: bold;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
 }
 .products{
     display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 img{
