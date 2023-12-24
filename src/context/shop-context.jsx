@@ -1,8 +1,10 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useState } from "react";
 import { PRODUCTS } from "../products";
 
 export const ShopContext = createContext(null);
 
+// this part is to set the quantity of each product to 0
+// each product is stored and kept in memory using the product.id
 const getDefaultCart = () => {
   let cart = {};
   for (let i = 1; i < PRODUCTS.length + 1; i++) {
@@ -10,6 +12,7 @@ const getDefaultCart = () => {
   }
   return cart;
 };
+// cart is an object that has all it's values = 0
 
 export const ShopContextProvider = (props) => {
   const [cartItems, setCartItems] = useState(getDefaultCart());
@@ -26,7 +29,9 @@ export const ShopContextProvider = (props) => {
   };
 
   const addToCart = (itemId) => {
-    setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
+    setCartItems((prev) => ({
+       ...prev, [itemId]: prev[itemId] + 1 
+      }));
   };
 
   const removeFromCart = (itemId) => {
